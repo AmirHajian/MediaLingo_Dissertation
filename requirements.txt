@@ -1,1 +1,8 @@
 youtube-transcript-api==1.2.4
+streamlit
+spacy
+openai>=1.0.0
+reportlab
+yt-dlp
+pydub
+ffmpeg-python
