@@ -9,7 +9,7 @@ def generate_pdf(lesson_text, level, score_text, quiz_data=None, file_path="less
     content = []
 
     # Header
-    content.append(Paragraph("<b>AI English Lesson</b>", styles["Title"]))
+    content.append(Paragraph("<b>MediaLingo Lesson</b>", styles["Title"]))
     content.append(Spacer(1, 12))
     content.append(Paragraph(f"<b>Level:</b> {level}", styles["Normal"]))
     content.append(Paragraph(f"<b>Quiz Score:</b> {score_text}", styles["Normal"]))

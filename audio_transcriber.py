@@ -1,5 +1,4 @@
 import yt_dlp
-import whisper
 import os
 import ssl
 import certifi
@@ -20,7 +19,10 @@ def download_audio(youtube_url, output_path="audio.mp3"):
     return output_path
 
 # Initialise the Whisper ASR model (base version for speed/efficiency)
+# Imported lazily so the app starts without loading Torch until audio is used.
 def transcribe_audio(file_path):
+    import whisper
+
     model = whisper.load_model("base")
 
     result = model.transcribe(file_path)

@@ -18,6 +18,9 @@ audio.mp3
 audio.*
 *.pdf
 
+# Local verification artifacts
+artifacts/
+
 # OS / editors
 .DS_Store
 .idea/
