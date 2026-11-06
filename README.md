@@ -12,10 +12,14 @@ config.py: Loads environment variables and provides the shared OpenAI client.
 
 Setup
 1. Install dependencies: pip install -r requirements.txt
-2. Create your environment file by copying the template: copy .env.example .env
-3. Open .env and replace the placeholder with your own OpenAI API key:
+2. Download the spaCy model used by the app:
+   python -m spacy download en_core_web_md
+3. Create your environment file by copying the template: copy .env.example .env
+4. Open .env and replace the placeholder with your own OpenAI API key:
    OPENAI_API_KEY=sk-...
-4. Run the app: streamlit run app.py
+5. Run the app: streamlit run app.py
+
+Note: audio transcription also needs the ffmpeg binary installed on your system.
 
 API Key Configuration
 The OpenAI API key is no longer written inside the source modules. It is read
