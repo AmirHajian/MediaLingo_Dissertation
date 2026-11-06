@@ -1,6 +1,4 @@
-from openai import OpenAI
-
-client = OpenAI(api_key="YOUR_API_KEY")
+from config import get_openai_client
 
 def extract_domain_keywords(text):
     prompt = f"""
@@ -16,6 +14,8 @@ def extract_domain_keywords(text):
     Topic: ...
     Keywords: word1, word2, word3
     """
+
+    client = get_openai_client()
 
     response = client.chat.completions.create(
         model="gpt-4.1-mini",

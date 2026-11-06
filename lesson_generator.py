@@ -1,8 +1,6 @@
 # lesson_generator.py
 
-from openai import OpenAI
-
-client = OpenAI(api_key="YOUR_API_KEY")
+from config import get_openai_client
 
 def generate_lesson(vocab, level):
     num_questions = 3 if len(vocab) < 3 else 5  
@@ -29,6 +27,8 @@ def generate_lesson(vocab, level):
     """
 
 
+
+    client = get_openai_client()
 
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
