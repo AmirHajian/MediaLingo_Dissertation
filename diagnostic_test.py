@@ -1,3 +1,6 @@
+import streamlit as st
+
+
 def run_diagnostic_test():
     st.subheader("🧪 Quick Level Test")
 
